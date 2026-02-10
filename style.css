@@ -325,7 +325,7 @@ input[type="radio"]:checked + .filter-btn {
 /* Needed 1 column for mobile and up to 4 columns on desktop */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/repeat */
 /* repeat() allows me to have multiple columns (or rows) in a repeating pattern. I can expand the grid to 4 columns on large screens and compact down to 1 column on smaller screen */
-.content-grid {
+#content-grid {
 	display: grid;
 	grid-template-columns: 1fr;
 	border-top: 1px solid var(--global-border-color);
