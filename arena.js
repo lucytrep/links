@@ -154,10 +154,6 @@ let renderBlock = (blockData) => {
 			// …still up to you, but here’s an example `iframe` element:
 			let linkedVideoItem =
 
-				// <li>
-				// 	<p><em>Linked Video</em></p>
-				// 	${ blockData.embed.html }
-				// </li>
 
             `
             <article class="content-block" data-category="houses">
