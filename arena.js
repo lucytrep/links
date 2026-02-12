@@ -96,7 +96,6 @@ let renderBlock = (blockData) => {
 			</article>
 			`
 			
-
 		channelBlocks.insertAdjacentHTML('beforeend', textItem)
 	}
 
