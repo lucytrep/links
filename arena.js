@@ -164,7 +164,7 @@ let renderBlock = (blockData) => {
                     <h2 class="block-title">
                         ${blockData.title ? blockData.title : 'Untitled'}
                     </h2>
-                    <p class="block-type">${blockData.title ? blockData.title : 'VIDEO'}</p>
+                    <p class="block-type">VIDEO</p>
                     </div>
             </article>
             `
