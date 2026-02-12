@@ -1,3 +1,19 @@
+/* Best Practice */
+/* what I was trying to do */
+/* what is the resource I used */
+/* what I learned from it */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap'); */
+
+/* Design Ideas */
+/* CHANGE THE CURSOR TO BE THE SAME HOUSE SVG */
+/* MAKE THE HOUSE GRAPHIC CHANGE TO OUTLINE VS. FULL MAYBE */
+/* Make somesort of quiz or purchase for each item structure */
+/* select item in top corner */
+/* make sure when you click items they become large and take over page/like pop up */
+/* can I have a styled screen that covers over with information?  */
+
+
 /* https://www.onlinewebfonts.com/download/9fb1e7c5b973d399cb9f95667021667e */
 @import url(https://db.onlinewebfonts.com/c/9fb1e7c5b973d399cb9f95667021667e?family=GT+America+Mono+Regular);
 
@@ -15,4 +31,129 @@
 	--underline-hover: #64966a;
 }
 
-/* need to go through and fix this if I want other pages */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	color: var(--color);
+	background-color: var(--background-color);
+	font-size: var(--body-copy);
+	font-family: var(--font-family);
+	min-block-size: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	margin: 0;
+	line-height: 1.5;
+
+}
+
+hgroup {
+	padding-block: var(--vertical);
+	padding-inline: var(--gutter);
+	border-bottom: 1px solid var(--global-border-color);
+	background-color: var(--background-color);
+
+	@media (min-width: 600px) {
+		padding-block: 2rem;
+		padding-inline: 1.5rem;
+	}
+
+	@media (min-width: 1000px) {
+		padding-block: 3rem;
+		padding-inline: 2rem;
+	}
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	border-bottom: 1px solid var(--border-color);
+}
+
+.nav-left {
+	display: flex;
+	gap: 1.5rem;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.nav-left li a {
+	text-decoration: none;
+	font-size: 0.9rem;
+	font-weight: 400;
+}
+
+.nav-left li a:hover {
+	border-bottom: 2px solid var(--underline-hover);
+}
+
+.nav-left li a.active {
+	border-bottom: 2px solid var(--color);
+}
+
+.nav-left > .active {
+	color: var(--color);
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px; 
+}
+
+h1 {
+	font-size: calc(2 * var(--heading-copy));
+	font-weight: 1000;
+	
+    @media (min-width: 600px) {
+		font-size: 4rem;
+		margin-bottom: 0.75rem;
+	}
+
+	@media (min-width: 1000px) {
+		font-size: 5rem;
+	}
+}
+
+hgroup {
+	p {
+		margin: 0;
+		font-weight: 300;
+		font-size: 0.9rem;
+
+		@media (min-width: 600px) {
+			font-size: 1rem;
+		}
+	}
+
+	h2 {
+		font-size: 1rem;
+		text-wrap: balance;
+		padding-block-end: 0.5rem;
+		line-height: 1.3rem;
+
+		@media (min-width: 600px) {
+			font-size: 1.5rem;
+			line-height: 1.9rem;
+		}
+	}
+
+}
+
+main {
+	padding-inline: var(--gutter);
+	padding-block: var(--vertical);
+	width: 100%;
+
+	@media (min-width: 600px) {
+		padding-inline: 1.5rem;
+		padding-block: 2rem;
+	}
+
+	@media (min-width: 1000px) {
+		padding-inline: 2rem;
+		padding-block: 3rem;
+	}
+}

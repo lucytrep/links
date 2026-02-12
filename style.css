@@ -280,7 +280,6 @@ main > p {
 	}
 }
 
-
 .block-image img,
 .block-image picture,
 .block-image iframe {
@@ -322,7 +321,7 @@ main > p {
 
 	@media (min-width: 1400px) {
 		padding: 2rem;
-		line-height: 1.2rem;
+		line-height: 1.3rem;
 		font-size: 0.9rem;
 	}
 }
@@ -391,7 +390,7 @@ main > p {
 	}
 }
 
-.block-date {
+/* .block-date {
 	font-size: 0.8rem;
 	color: #999;
 	font-weight: 300;
@@ -403,7 +402,7 @@ main > p {
 	@media (min-width: 1000px) {
 		font-size: 0.9rem;
 	}
-}
+} */
 
 a.content-block {
     text-decoration: none;
