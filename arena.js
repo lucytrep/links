@@ -80,23 +80,22 @@ let renderBlock = (blockData) => {
 		let textItem =
 			
             `
-            <article class="content-block" data-category="resources">
-                <div class="block-image block-text">
-                    <div class="text-content">
-                    ${blockData.description && blockData.description.html
-                        ? blockData.description.html
-                        : (blockData.title ? blockData.title : 'Untitled')
-                    }
-                    </div>
-                </div>
-                <div class="block-info">
-                    <h2 class="block-title">
-                    ${blockData.title ? blockData.title : 'Untitled'}
-                    </h2>
-                    <p class="block-type">TEXT</p>
-                </div>
-            </article>
+			<article class="content-block" data-category="resources">
+				<div class="block-image block-text">
+					<div class="text-content">
+						${ blockData.content?.html || '' }
+					</div>
+				</div>
+
+				<div class="block-info">
+					<h2 class="block-title">
+						${ blockData.title || 'Untitled' }
+					</h2>
+					<p class="block-type">TEXT</p>
+				</div>
+			</article>
 			`
+			
 
 		channelBlocks.insertAdjacentHTML('beforeend', textItem)
 	}

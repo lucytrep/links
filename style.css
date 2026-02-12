@@ -185,8 +185,7 @@ main > p {
     display: grid;
     grid-template-columns: 1fr;
     border-top: 1px solid var(--global-border-color);
-    grid-auto-rows: auto;
-    min-width: 0; /* lets grid shrink so it doesn't overflow the page */
+    grid-auto-rows: minmax(0, auto);
     width: 100%;
     padding-inline: var(--gutter);
     box-sizing: border-box;
@@ -212,7 +211,7 @@ main > p {
 
 .content-block {
 	position: relative;
-	min-width: 0; /* lets cards shrink inside the grid */
+	min-width: 0;
 	border-bottom: 1px solid var(--global-border-color);
 	grid-template-rows: auto min-content;
 	background-color: var(--background-color);
@@ -303,7 +302,7 @@ main > p {
 .block-text {
     background-color: var(--background-color);
 	padding: 1rem;
-    min-height: 12.5rem;
+	min-height: 6rem;
 	height: auto;
     overflow-y: visible;
     font-size: smaller;
@@ -321,11 +320,6 @@ main > p {
 	}
 }
 
-.block-text .text-content {
-    font-size: 0.75rem;
-    line-height: 1.3;
-    overflow: hidden;
-}
 
 .block-info {
 	padding: 1rem;
