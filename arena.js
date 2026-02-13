@@ -30,6 +30,7 @@ let renderBlock = (blockData) => {
 		// Declares a “template literal” of the dynamic HTML we want.
 		let linkItem =
 			
+       	
         `
         <article class="content-block" data-category="houses">
             <a href="${blockData.source.url}" target="_blank" class="block-image">
@@ -39,7 +40,7 @@ let renderBlock = (blockData) => {
                 <h2 class="block-title">
                 ${blockData.title ? blockData.title : 'Untitled'}
                 </h2>
-                <p class="block-type">IMAGE</p>
+                <div class="block-type"> ${blockData.description ? blockData.description.html : 'Untitled'} </div>
             </div>
         </article>
 		`
@@ -47,7 +48,6 @@ let renderBlock = (blockData) => {
 		// And puts it into the page!
 		channelBlocks.insertAdjacentHTML('beforeend', linkItem)
 
-        // <p class="block-date">February 2026</p>
 
 		// More on template literals:
 		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
@@ -67,7 +67,7 @@ let renderBlock = (blockData) => {
 					<h2 class="block-title">
 						${blockData.title ? blockData.title : 'Untitled'}
 					</h2>
-					<p class="block-type">IMAGE</p>
+					<div class="block-type"> ${blockData.description ? blockData.description.html : 'Untitled'} </div>
 				</div>
 			</article>
 			`
@@ -79,6 +79,7 @@ let renderBlock = (blockData) => {
 		// Build a card that uses the Are.na description HTML when present
 		let textItem =
 			
+           
             `
 			<article class="content-block" data-category="resources">
 				<div class="block-image block-text">
@@ -91,11 +92,12 @@ let renderBlock = (blockData) => {
 					<h2 class="block-title">
 						${ blockData.title || 'Untitled' }
 					</h2>
-					<p class="block-type">TEXT</p>
+					<div class="block-type"> ${blockData.description ? blockData.description.html : 'Untitled'} </div>
 				</div>
 			</article>
 			`
 			
+
 		channelBlocks.insertAdjacentHTML('beforeend', textItem)
 	}
 
@@ -151,8 +153,7 @@ let renderBlock = (blockData) => {
 		if (embedType.includes('video')) {
 			// …still up to you, but here’s an example `iframe` element:
 			let linkedVideoItem =
-
-
+           
             `
             <article class="content-block" data-category="houses">
                 <div class="block-image block-video">
@@ -162,12 +163,10 @@ let renderBlock = (blockData) => {
                     <h2 class="block-title">
                         ${blockData.title ? blockData.title : 'Untitled'}
                     </h2>
-                    <p class="block-type">VIDEO</p>
+                    <div class="block-type"> ${blockData.description ? blockData.description.html : ''} </div>
                     </div>
             </article>
             `
-            // <p class="block-date">${blockData.updated_at ? new Date(blockData.updated_at).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) : ''}</p>
-
                 
 			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
 
@@ -195,6 +194,7 @@ let renderUser = (userData) => {
             <button type="button" class="block-save-btn" data-block-id="${ blockData.id }" aria-label="Save to build">Save</button>
 			<img src="${ userData.avatar }">
 			<h3>${ userData.name }</h3>
+			<div class="block-type"> ${blockData.description ? blockData.description.html : ''} </div>
 			<p><a href="https://are.na/${ userData.slug }">Are.na profile ↗</a></p>
 		</address>
 		`

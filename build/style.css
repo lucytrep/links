@@ -1,3 +1,18 @@
+:root {
+	--color: #1a1a1a;
+	--background-color: #f7f5f1;
+	/* --global-border-color: rgb(84, 110, 79); */
+	--global-border-color: #e4e3bc;
+	--font-family: 'GT America Mono Regular';
+	--body-copy: 0.9rem;
+	--heading-copy: 1.75rem;
+	--gutter: 1rem;
+	--vertical: 1.5rem;
+	--hover: rgb(196, 214, 196);
+	--underline-hover: #64966a;
+}
+
+
 #content-grid {
     display: grid;
     grid-template-columns: repeat(24, 1fr);
@@ -53,3 +68,5 @@
 .block-video video {
     display: none;
 }
+
+
