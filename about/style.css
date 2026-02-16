@@ -1,0 +1,90 @@
+/* Best Practice */
+/* what I was trying to do */
+/* what is the resource I used */
+/* what I learned from it */
+
+body {
+        font-family: 'GT America Mono Regular', monospace;
+}
+
+hgroup {
+    padding-block: var(--vertical);
+    padding-inline: var(--gutter);
+    border-bottom: 1px solid var(--global-border-color);
+    background-color: var(--background-color);
+
+    @media (width > 800px) {
+        padding-inline: 1.5rem;
+    }
+
+    @media (width > 1000px) {
+        padding-inline: 2rem;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.nav-left {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-left li a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.nav-left li a:hover {
+    border-bottom: 2px solid var(--underline-hover);
+}
+
+.nav-left > .active {
+    color: var(--color);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+main {
+    padding-inline: var(--gutter);
+    padding-block: var(--vertical);
+    width: 100%;
+
+    @media (width > 800px) {
+        padding-inline: 1.5rem;
+        padding-block: 2rem;
+    }
+
+    @media (width > 1000px) {
+        padding-inline: 2rem;
+        padding-block: 3rem;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+footer ul {
+    list-style: none;
+}
