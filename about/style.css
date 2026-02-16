@@ -72,19 +72,22 @@ main {
 }
 
 footer {
+    padding-block: var(--vertical);
+    padding-inline: var(--gutter);
+    border-top: 1px solid var(--global-border-color);
+    background-color: var(--background-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.footer-left {
-    text-align: left;
-}
-
-.footer-right {
-    text-align: right;
+footer p {
+    font-size: 0.85rem;
+    margin: 0;
 }
 
 footer ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }

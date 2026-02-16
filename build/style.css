@@ -399,31 +399,6 @@ a.content-block {
     color: #666;
 }
 
-footer {
-	padding-block: var(--vertical);
-	padding-inline: var(--gutter);
-	border-top: 1px solid var(--global-border-color);
-	background-color: var(--background-color);
-
-	@media (min-width: 600px) {
-		padding-block: 2rem;
-		padding-inline: 1.5rem;
-	}
-
-	@media (min-width: 1000px) {
-		padding-block: 3rem;
-		padding-inline: 2rem;
-	}
-}
-
-footer p {
-	font-size: 0.85rem;
-
-	@media (min-width: 600px) {
-		font-size: 0.9rem;
-	}
-}
-
 /* "here" */
 a {
 	color: var(--color);
@@ -438,4 +413,19 @@ a:hover {
 
 em {
 	font-style: italic;
+}
+
+footer {
+    padding-block: var(--vertical);
+    padding-inline: var(--gutter);
+    border-top: 1px solid var(--global-border-color);
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    font-size: 0.85rem;
+    margin: 0;
 }

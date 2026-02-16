@@ -139,14 +139,8 @@ footer {
     align-items: center;
 }
 
-.footer-left {
-    text-align: left;
-}
-
-.footer-right {
-    text-align: right;
-}
-
 footer ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
