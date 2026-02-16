@@ -30,9 +30,8 @@ let renderBlock = (blockData) => {
 		// Declares a “template literal” of the dynamic HTML we want.
 		let linkItem =
 			
-       	
         `
-        <article class="content-block" data-category="houses">
+        <article class="content-block">
             <a href="${ blockData.source.url }" target="_blank" class="block-image">
                 <img src="${ blockData.image.medium.src_2x}" alt="${blockData.title || 'Untitled' }">
             </a>
@@ -59,7 +58,7 @@ let renderBlock = (blockData) => {
 		let imageItem =
 			
             `
-			<article class="content-block" data-category="materials">
+			<article class="content-block">
 				<div class="block-image">
 					<img src="${ blockData.image.medium.src_2x}" alt="${blockData.title || 'Untitled' }">
 				</div>
@@ -79,9 +78,8 @@ let renderBlock = (blockData) => {
 		// Build a card that uses the Are.na description HTML when present
 		let textItem =
 			
-           
             `
-			<article class="content-block" data-category="resources">
+			<article class="content-block">
 				<div class="block-image block-text">
 					<div class="text-content">
 						${ blockData.content?.html || '' }
@@ -97,7 +95,6 @@ let renderBlock = (blockData) => {
 			</article>
 			`
 			
-
 		channelBlocks.insertAdjacentHTML('beforeend', textItem)
 	}
 
@@ -111,15 +108,15 @@ let renderBlock = (blockData) => {
 			let videoItem =
 				
 			`
-				<article class="content-block" data-category="houses">
-					<div class="block-image block-video">
-						<video controls src="${ blockData.attachment.url }"></video>
-					</div>
-					<div class="block-info">
-						<h2 class="block-title">${ blockData.title || 'Untitled' }</h2>
-						<p class="block-type">${ blockData.description ? blockData.description.html : '' }</p>
-					</div>
-				</article>
+			<article class="content-block">
+				<div class="block-image block-video">
+					<video controls src="${ blockData.attachment.url }"></video>
+				</div>
+				<div class="block-info">
+					<h2 class="block-title">${ blockData.title || 'Untitled' }</h2>
+					<div class="block-type">${ blockData.description ? blockData.description.html : '' }</div>
+				</div>
+			</article>
 			`
 
 			channelBlocks.insertAdjacentHTML('beforeend', videoItem)
@@ -137,16 +134,17 @@ let renderBlock = (blockData) => {
 		else if (contentType.includes('audio')) {
 			// …still up to you, but here’s an `audio` element:
 			let audioItem =
-            `
-                <article class="content-block" data-category="other">
-                    <div class="block-image">
-                        <audio controls src="${ blockData.attachment.url }}"></audio>
-                    </div>
-                    <div class="block-info">
-                        <h2 class="block-title">${ blockData.title || 'Untitled'}</h2>
-                        <p class="block-type">${ blockData.description ? blockData.description.html : 'Untitled' }</p>
-                    </div>
-                </article>
+            
+			`
+			<article class="content-block">
+				<div class="block-audio">
+					<audio controls src="${blockData.attachment.url}"></audio>
+				</div>
+				<div class="block-info">
+					<h2 class="block-title">${ blockData.title || 'Untitled' }</h2>
+					<div class="block-type">${ blockData.description ? blockData.description.html : '' }</div>
+				</div>
+			</article>
             `
 
             channelBlocks.insertAdjacentHTML('beforeend', audioItem)
@@ -166,7 +164,7 @@ let renderBlock = (blockData) => {
 			let linkedVideoItem =
            
             `
-            <article class="content-block" data-category="houses">
+            <article class="content-block">
                 <div class="block-image block-video">
                 ${ blockData.embed.html }
                 </div>
@@ -197,6 +195,7 @@ let renderBlock = (blockData) => {
 		let channelUsers = document.querySelector('#channel-users') // Container.
 
 		let userAddress =
+			
 			`
 			<address>
 				<img src="${ userData.avatar }">
