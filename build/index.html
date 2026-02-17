@@ -5,8 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="../reset.css" rel="stylesheet">
 		<link href="style.css" rel="stylesheet">
+		<link href="script.css" rel="stylesheet">
 		<script defer src="../arena.js"></script>
-		<script defer src="../script.js"></script>
+		<script defer src="script.js"></script>
 		<link href="https://db.onlinewebfonts.com/c/9fb1e7c5b973d399cb9f95667021667e?family=GT+America+Mono+Regular" rel="stylesheet">
 	</head>
 	<body>
@@ -36,6 +37,15 @@
 		</hgroup>
 		<main>
 			<div id="content-grid"></div>
+			<!-- <dialog id="dialog" open> -->
+			<!-- class example assisted by coding tutor to better understand rules -->
+			<dialog id="dialog">
+				<button id="close-btn">✕</button>
+				<div id="modal-image"></div>
+				<h2 id="modal-title"></h2>
+				<div id="modal-type"></div>
+				<a id="modal-link" target="_blank">MORE INFO</a>
+			</dialog>
 		</main>
 		<footer>
 			<ul class="footer-left">

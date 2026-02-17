@@ -1,0 +1,27 @@
+/* class example assisted by coding tutor to better understand rules */
+
+/* Stops the page from scrolling when there is an open one: */
+body:has(dialog[open]) { overflow: hidden; }
+
+dialog {
+    background-color: var(--background-color);
+    border: 1px solid var(--global-border-color);
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    position: fixed;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    translate: -50% -50%;
+    
+    &[open] { 
+        display: grid; 
+        gap: 1rem; 
+        /* easier for me to visualize */
+    } /* `block` is default, but we can override. */
+
+    &::backdrop {
+		background-color: rgb(0 0 0 / 66%); /* A dark overlay. */
+		pointer-events: none; /* Let clicks pass through to our `document` listener. */
+	}
+}
