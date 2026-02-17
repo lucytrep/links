@@ -3,6 +3,40 @@
 /* what is the resource I used */
 /* what I learned from it */
 
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--background-color);
+    border: 1px solid var(--global-border-color);
+    padding: 0.5rem 0;
+    margin-top: 0;
+    list-style: none;
+    z-index: 1000;
+	text-align: left;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    padding-block: 0.3rem;
+    padding-inline: 0.8rem;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    color: var(--color);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
 body hgroup {
     border-bottom: none;
 }
@@ -143,4 +177,13 @@ footer ul {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+/* wanted to hide all the elements before a cetain point for the landing page */
+/* https://css-tricks.com/useful-nth-child-recipies/ 
+https://developer.chrome.com/docs/css-ui/css-nth-child-of-s */
+/* "Targeting Ranges: You can use n+ and -n+ to select ranges, such as :nth-child(n+10):nth-child(-n+20) to target elements 10-20." and "Example: Target items 1-30 and apply alternating, "random" styles" from Google */
+/* Select every child up to the 30th one, and do not display them */
+.content-block:nth-child(-n+30) {
+    display: none;
 }

@@ -137,7 +137,7 @@ let renderBlock = (blockData) => {
             
 			`
 			<article class="content-block">
-				<div class="block-audio">
+				<div>
 					<audio controls src="${blockData.attachment.url}"></audio>
 				</div>
 				<div class="block-info">

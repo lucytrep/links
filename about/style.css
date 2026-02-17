@@ -43,12 +43,45 @@ hgroup {
     font-size: 0.9rem;
     font-weight: 400;
 }
-
+/* 
 .nav-left li a:hover {
     border-bottom: 2px solid var(--underline-hover);
-}
+} */
 
 .nav-left > .active {
+    color: var(--color);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--background-color);
+    border: 1px solid var(--global-border-color);
+    padding: 0.5rem 0;
+    margin-top: 0;
+    list-style: none;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    padding-block: 0.3rem;
+    padding-inline: 0.8rem;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
     color: var(--color);
     text-decoration: underline;
     text-decoration-thickness: 2px;

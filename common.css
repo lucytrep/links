@@ -64,15 +64,15 @@ hgroup {
     font-weight: 400;
 }
 
-.nav-left li a:hover {
+/* .nav-left li a:hover {
     border-bottom: 2px solid var(--underline-hover);
-}
+} */
 
-.nav-left > .active {
+/* .nav-left > .active {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 3px;
-}
+} */
 
 h1 {
     font-size: calc(2 * var(--heading-copy));
