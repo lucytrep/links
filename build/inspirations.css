@@ -1,0 +1,7 @@
+#content-grid .content-block:nth-child(-n+44) {
+    display: none;
+}
+
+#content-grid .content-block:nth-child(n+55) {
+    display: none;
+}
