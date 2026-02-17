@@ -1,1 +1,7 @@
-/* 27 - 45 */
+#content-grid .content-block:nth-child(-n+25) {
+    display: none;
+}
+
+#content-grid .content-block:nth-child(n+45) {
+    display: none;
+}
