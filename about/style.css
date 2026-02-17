@@ -82,10 +82,8 @@ hgroup {
 }
 
 .dropdown-menu a:hover {
-    color: var(--color);
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 3px;
+    color: var(--underline-hover);
+    text-decoration: none;
 }
 
 main {

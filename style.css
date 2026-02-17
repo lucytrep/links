@@ -3,6 +3,29 @@
 /* what is the resource I used */
 /* what I learned from it */
 
+body hgroup {
+    border-bottom: none;
+}
+
+hgroup ul {
+    display: block;
+    text-align: center;
+    list-style: none;
+    padding-block-start: 1rem;
+    
+    @media (width > 800px) {
+        font-size: 0.75rem;
+    }
+
+    @media (width > 1000px) {
+        font-size: 0.9rem;
+    }
+}
+
+hgroup ul a:hover {
+    opacity: 0.6;
+}
+
 .dropdown {
     position: relative;
 }
@@ -31,33 +54,8 @@
 }
 
 .dropdown-menu a:hover {
-    color: var(--color);
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 3px;
-}
-
-body hgroup {
-    border-bottom: none;
-}
-
-hgroup ul {
-    display: block;
-    text-align: center;
-    list-style: none;
-    padding-block-start: 1rem;
-    
-    @media (width > 800px) {
-        font-size: 0.75rem;
-    }
-
-    @media (width > 1000px) {
-        font-size: 0.9rem;
-    }
-}
-
-hgroup ul a:hover {
-    opacity: 0.6;
+    color: var(--underline-hover);
+    text-decoration: none;
 }
 
 .button {
