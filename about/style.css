@@ -86,6 +86,65 @@ hgroup {
     text-decoration: none;
 }
 
+.contents {
+    display: grid;
+    columns: 1fr;
+    gap: 3rem;
+    
+    @media (min-width: 1400px) {
+        gap: 5rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* .about-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)
+} */
+
+#content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+/* 
+    @media (min-width: 1400px) {
+        padding-inline: 3rem;
+    } */
+
+}
+
+.block-info, .block-title {
+    display: none;
+}
+
+.block-image {
+    /* margin-block-end: -1rem; */
+    padding: 0.3rem;
+
+    @media (min-width: 800px) {
+        padding: 0.4rem;
+    }
+
+    @media (min-width: 1400px) {
+        padding: 0.5rem;
+    }
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    clip-path: inset(0);
+}
+
+.content-block:nth-child(-n+38) {
+    display: none;
+}
+
+#content-grid .content-block:nth-child(n+45) {
+    display: none;
+}
+
 main {
     padding-inline: var(--gutter);
     padding-block: var(--vertical);
