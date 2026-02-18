@@ -25,3 +25,15 @@ dialog {
 		pointer-events: none; /* Let clicks pass through to our `document` listener. */
 	}
 }
+
+#modal-title {
+    font-weight: 1000;
+    font-size: larger;
+}
+
+#modal-image video {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    clip-path: inset(0);
+}
