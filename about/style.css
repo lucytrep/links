@@ -91,16 +91,25 @@ hgroup {
     columns: 1fr;
     gap: 3rem;
     
+
+    @media (min-width: 1000px) {
+        gap: 5rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     @media (min-width: 1400px) {
         gap: 5rem;
         grid-template-columns: repeat(2, 1fr);
     }
+
+    p {
+        padding-block-end: 2rem;
+    }
 }
 
-/* .about-images {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr)
-} */
+.about-images {
+
+}
 
 #content-grid {
     display: grid;
@@ -159,6 +168,23 @@ main {
         padding-inline: 2rem;
         padding-block: 3rem;
     }
+}
+
+.button {
+    background-color: var(--global-border-color);
+    color: var(--color);
+    border-radius: 0.75rem;
+    padding: 0.5rem 1rem;
+
+    width: fit-content;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.button:hover {
+    background-color: #c8c7a6;
+	color: var(--color);
 }
 
 footer {
