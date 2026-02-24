@@ -56,7 +56,7 @@ let renderBlock = (blockData) => {
 	if (!isHomePage && !isBuildPage && !window.location.pathname.includes(category)) return
 	// if it is NOT the home page AND it is NOT the build page AND the URL does NOT include the category, then skip this block and return to next
 
-	
+
 	// Links!
 	if (blockData.type == 'Link') {
 		// Declares a “template literal” of the dynamic HTML we want.
@@ -160,6 +160,24 @@ let renderBlock = (blockData) => {
 	// 	// Uploaded PDFs!
 		else if (contentType.includes('pdf')) {
 			// …up to you!
+			let pdfItem =
+
+			`
+			<article class="content-block" data-id="${ blockData.id }">
+				<div class="block-image block-pdf">
+					<img src="${ blockData.image.medium.src_2x}" alt="${blockData.title || 'Untitled' }">
+				</div>
+				<div class="block-info">
+					<h2 class="block-title">
+						${ blockData.title ? blockData.title : 'Untitled' }
+					</h2>
+					<div class="block-type"> ${ blockData.description ? blockData.description.html : 'Untitled' } </div>
+				</div>
+			</article>
+			`
+
+            channelBlocks.insertAdjacentHTML('beforeend', pdfItem)
+        
 		}
 
 	// 	// Uploaded audio!

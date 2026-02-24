@@ -298,13 +298,13 @@ main > p {
     
   
 	@media (min-width: 600px) {
-	  aspect-ratio: 1 / 1;
-	  padding: 1.25rem;
+	    aspect-ratio: 1 / 1;
+	    padding: 1.25rem;
 	}
   
 	@media (min-width: 1000px) {
         aspect-ratio: 1 / 1;
-	  padding: 1.5rem;
+	    padding: 1.5rem;
 	}
   
 	@media (min-width: 1400px) {
@@ -367,6 +367,17 @@ main > p {
 		line-height: 1.3rem;
 		font-size: 0.9rem;
 	}
+}
+
+/* Are.na generates PDF thumbnails with black borders baked in */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/zoom  */
+/* clip-path and scale used to crop them out since the source image cannot be changed */
+.block-pdf img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: inset(5%);
+    transform: scale(1.11);
 }
 
 .block-info {
