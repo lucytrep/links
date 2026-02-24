@@ -16,7 +16,10 @@ document.querySelector('#content-grid').addEventListener('click', (event) => { /
     let iframe = block.querySelector('iframe')?.src // video was not working so trying to pull from iframe instead
     let audio = block.querySelector('audio')?.src // for audio and odd remaining videos
     let video = block.querySelector('video')?.src // for video
+    let id = block.getAttribute('data-id') // // grabbing Are.na id reference https://www.are.na/developers/explore/block/block so I am able to have my content link directly back to my Are.na board
 
+
+    document.getElementById('modal-link').href = `https://www.are.na/block/${id}` 	// prof example channelLink.href = `https://www.are.na/channel/${channelSlug}`
     document.getElementById('modal-title').textContent = title || 'Untitled' // textContent https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent
     document.getElementById('modal-image').innerHTML = img  ? `<img src="${img}" class="modal-img">` : textContent ? `<div class="modal-text">${textContent}</div>` : iframe ? `<iframe src="${iframe}" style="width:100%; height:300px" frameborder="0" allowfullscreen></iframe>` : audio ? `<audio controls src="${audio}" style="width:100%"></audio>` : video ? `<video controls src="${video}" style="width:100%"></video>` : '' // ? = "if true use this", :  = "otherwise use this". '' = empty string (nothing)
     // if image exists, show image, if no image but text exists, show text, if no image or text but iframe exists, show iframe, if no image or text or iframe exists, show audio, ... show video etc. if none of the above exist, show nothing,
