@@ -45,7 +45,6 @@ body {
 }
 
 hgroup {
-    padding-block: var(--vertical);
     padding-inline: var(--gutter);
 
 	@media (min-width: 600px) {
@@ -61,10 +60,8 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    padding-block-start: 1rem;
+    padding-block-start: var(--vertical);
     padding-inline: var(--gutter);
-    border-bottom: 1px solid var(--global-border-color);
-    background-color: var(--background-color);
 
     @media (min-width: 600px) {
         padding-inline: 1.5rem;
@@ -185,6 +182,7 @@ hgroup {
 		font-weight: 300;
 		font-size: 0.9rem;
         text-wrap: balance;
+        padding-block-end: 3rem;
 
 		@media (min-width: 600px) {
 			font-size: 1rem;

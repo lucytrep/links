@@ -93,6 +93,17 @@ hgroup {
 
 .about p {
     text-wrap: balance;
+	font-size: 0.9rem;
+    line-height: 1.5rem;
+
+    @media (width > 800px) {
+        font-size: 1rem;
+    }
+
+    @media (width > 1000px) {
+		font-size: 1rem;
+    }
+
 }
 
 .contents {
@@ -106,6 +117,7 @@ hgroup {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* went super wide with this section specifically */
     @media (min-width: 1400px) {
         gap: 5rem;
         grid-template-columns: repeat(2, 1fr);
