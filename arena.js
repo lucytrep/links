@@ -62,18 +62,19 @@ let renderBlock = (blockData) => {
 		// Declares a “template literal” of the dynamic HTML we want.
 		let linkItem =
 			
-        `
-        <article class="content-block" data-id="${ blockData.id }"> 
-            <a href="${ blockData.source.url }" target="_blank" class="block-image">
-                <img src="${ blockData.image.medium.src_2x}" alt="${blockData.title || 'Untitled' }">
-            </a>
-            <div class="block-info">
-                <h2 class="block-title">
-                ${ blockData.title ? blockData.title : 'Untitled' }
-                </h2>
-                <div class="block-type"> ${ blockData.description ? blockData.description.html : 'Untitled'} </div>
-            </div>
-        </article>
+		`
+		<article class="content-block" data-id="${ blockData.id }"> 
+			<a href="${ blockData.source.url }" target="_blank" class="block-image">
+				<img src="${ blockData.image.medium.src_2x}" alt="${blockData.title || 'Untitled' }">
+			</a>
+			<div class="block-info">
+				<h2 class="block-title">
+				${ blockData.title ? blockData.title : 'Untitled' }
+				</h2>
+				<div class="block-type"> ${ blockData.description ? blockData.description.html : 'Untitled'} </div>
+				<button class="view-btn">View</button>
+			</div>
+		</article>
 		`
 
 		// And puts it into the page!
@@ -99,6 +100,7 @@ let renderBlock = (blockData) => {
 						${ blockData.title ? blockData.title : 'Untitled' }
 					</h2>
 					<div class="block-type"> ${ blockData.description ? blockData.description.html : 'Untitled' } </div>
+					<button class="view-btn">View</button>
 				</div>
 			</article>
 			`
@@ -117,12 +119,12 @@ let renderBlock = (blockData) => {
 						${ blockData.content?.html || '' }
 					</div>
 				</div>
-
 				<div class="block-info">
 					<h2 class="block-title">
 						${ blockData.title || 'Untitled' }
 					</h2>
 					<div class="block-type"> ${ blockData.description ? blockData.description.html : 'Untitled' } </div>
+					<button class="view-btn">View</button>
 				</div>
 			</article>
 			`
@@ -147,6 +149,7 @@ let renderBlock = (blockData) => {
 				<div class="block-info">
 					<h2 class="block-title">${ blockData.title || 'Untitled' }</h2>
 					<div class="block-type">${ blockData.description ? blockData.description.html : '' }</div>
+					<button class="view-btn">View</button>
 				</div>
 			</article>
 			`
@@ -172,6 +175,7 @@ let renderBlock = (blockData) => {
 						${ blockData.title ? blockData.title : 'Untitled' }
 					</h2>
 					<div class="block-type"> ${ blockData.description ? blockData.description.html : 'Untitled' } </div>
+					<button class="view-btn">View</button>
 				</div>
 			</article>
 			`
@@ -193,6 +197,7 @@ let renderBlock = (blockData) => {
 				<div class="block-info">
 					<h2 class="block-title">${ blockData.title || 'Untitled' }</h2>
 					<div class="block-type">${ blockData.description ? blockData.description.html : '' }</div>
+					<button class="view-btn">View</button>
 				</div>
 			</article>
             `
@@ -223,6 +228,7 @@ let renderBlock = (blockData) => {
                         ${ blockData.title ? blockData.title : 'Untitled' }
                     </h2>
                     <div class="block-type"> ${ blockData.description ? blockData.description.html : '' } </div>
+					<button class="view-btn">View</button>
                     </div>
             </article>
             `
