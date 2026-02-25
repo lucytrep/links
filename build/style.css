@@ -67,6 +67,11 @@ hgroup {
 	margin-block-end: 1rem;
 }
 
+.build-icon {
+    width: 18px;
+    height: 18px;
+}
+
 .nav-left {
 	display: flex;
 	gap: 1.5rem;

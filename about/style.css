@@ -30,6 +30,11 @@ hgroup {
     margin-bottom: 1rem;
 }
 
+.build-icon {
+    width: 18px;
+    height: 18px;
+}
+
 .nav-left {
     display: flex;
     gap: 1.5rem;
@@ -144,14 +149,6 @@ img {
     aspect-ratio: 1 / 1;
     object-fit: cover;
     clip-path: inset(0);
-}
-
-.content-block:nth-child(-n+38) {
-    display: none;
-}
-
-#content-grid .content-block:nth-child(n+45) {
-    display: none;
 }
 
 main {
