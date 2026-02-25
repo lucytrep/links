@@ -3,178 +3,9 @@
 /* what is the resource I used */
 /* what I learned from it */
 
-body {
-        font-family: 'GT America Mono Regular', monospace;
-}
-
-hgroup {
-    padding-block: var(--vertical);
-    padding-inline: var(--gutter);
-    border-bottom: 1px solid var(--global-border-color);
-    background-color: var(--background-color);
-
-    @media (width > 800px) {
-        padding-inline: 1.5rem;
-    }
-
-    @media (width > 1000px) {
-        padding-inline: 2rem;
-    }
-}
-
-.build-icon {
-    width: 18px;
-    height: 18px;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-}
-
-.nav-left {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-left li a {
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 400;
-}
-/* 
-.nav-left li a:hover {
-    border-bottom: 2px solid var(--underline-hover);
-} */
-
-.nav-left > .active {
-    color: var(--color);
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 3px;
-}
-
-.dropdown {
-    position: relative;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: var(--background-color);
-    border: 1px solid var(--global-border-color);
-    padding: 0.5rem 0;
-    margin-top: 0;
-    list-style: none;
-    z-index: 1000;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.dropdown-menu a {
-    padding-block: 0.3rem;
-    padding-inline: 0.8rem;
-    display: block;
-    text-decoration: none;
-}
-
-.dropdown-menu a:hover {
-    color: var(--underline-hover);
-    text-decoration: none;
-}
-
-.about p {
-    text-wrap: balance;
-	font-size: 0.9rem;
-    line-height: 1.5rem;
-
-    @media (width > 800px) {
-        font-size: 1rem;
-    }
-
-    @media (width > 1000px) {
-		font-size: 1rem;
-    }
-
-}
-
-.contents {
-    display: grid;
-    columns: 1fr;
-    gap: 3rem;
-    
-
-    @media (min-width: 1000px) {
-        gap: 5rem;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* went super wide with this section specifically */
-    @media (min-width: 1400px) {
-        gap: 5rem;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    p {
-        padding-block-end: 2rem;
-    }
-}
-
-#content-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-/* 
-    @media (min-width: 1400px) {
-        padding-inline: 3rem;
-    } */
-
-}
-
-.block-info, .block-title {
-    display: none;
-}
-
-.block-image {
-    /* margin-block-end: -1rem; */
-    padding: 0.3rem;
-
-    @media (min-width: 800px) {
-        padding: 0.4rem;
-    }
-
-    @media (min-width: 1400px) {
-        padding: 0.5rem;
-    }
-}
-
-img {
-    height: 100%;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    clip-path: inset(0);
-}
-
-.content-block:nth-child(-n+1) {
-    display: none;
-}
-
-#content-grid .content-block:nth-child(n+8) {
-    display: none;
-}
-
 main {
     padding-inline: var(--gutter);
     padding-block: var(--vertical);
-    width: 100%;
 
     @media (width > 800px) {
         padding-inline: 1.5rem;
@@ -187,40 +18,70 @@ main {
     }
 }
 
+.about p {
+    text-wrap: balance;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+
+    @media (width > 800px) {
+        font-size: 1rem;
+    }
+}
+
+.contents {
+    display: grid;
+    gap: 3rem;
+
+    @media (min-width: 1000px) {
+        gap: 5rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    p {
+        padding-block-end: 2rem;
+    }
+}
+
+#content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    clip-path: inset(0);
+}
+
+.block-info,
+.block-title {
+    display: none;
+}
+
+.block-image {
+    padding: 0.3rem;
+
+    @media (min-width: 800px) {
+        padding: 0.4rem;
+    }
+
+    @media (min-width: 1400px) {
+        padding: 0.5rem;
+    }
+}
+
 .button {
-    background-color: var(--global-border-color);
-    color: var(--color);
-    border-radius: 0.75rem;
-    padding: 0.5rem 1rem;
-
-    width: fit-content;
-    cursor: pointer;
-    text-decoration: none;
-
+    margin-inline-start: 0;
+    margin-block-start: 0;
 }
 
-.button:hover {
-    background-color: #c8c7a6;
-	color: var(--color);
+/* hide extra blocks - nth-child used as fallback until data-limit JS is implemented */
+.content-block:nth-child(-n+1) {
+    display: none;
 }
 
-footer {
-    padding-block: var(--vertical);
-    padding-inline: var(--gutter);
-    border-top: 1px solid var(--global-border-color);
-    background-color: var(--background-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-footer p {
-    font-size: 0.85rem;
-    margin: 0;
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+#content-grid .content-block:nth-child(n+8) {
+    display: none;
 }

@@ -28,16 +28,30 @@ body {
 }
 
 hgroup {
-    padding-block: var(--vertical);
     padding-inline: var(--gutter);
-    border-bottom: 1px solid var(--global-border-color);
+
+	@media (min-width: 600px) {
+        padding-inline: 1.5rem;
+	}
+
+	@media (min-width: 1000px) {
+        padding-inline: 2rem;
+	}
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding-block-start: var(--vertical);
+    padding-inline: var(--gutter);
     background-color: var(--background-color);
 
-    @media (width > 800px) {
+    @media (min-width: 600px) {
         padding-inline: 1.5rem;
     }
 
-    @media (width > 1000px) {
+    @media (min-width: 1000px) {
         padding-inline: 2rem;
     }
 }
@@ -69,28 +83,53 @@ hgroup {
     font-weight: 400;
 }
 
-/* .nav-left li a:hover {
-    border-bottom: 2px solid var(--underline-hover);
-} */
 
-/* .nav-left > .active {
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--background-color);
+    border: 1px solid var(--global-border-color);
+    padding: 0.5rem 0;
+    margin-top: 0;
+    list-style: none;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown.dropdown-active .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    padding-block: 0.3rem;
+    padding-inline: 0.8rem;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-menu a.active {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 3px;
-} */
+}
 
 h1 {
     font-size: calc(2 * var(--heading-copy));
     font-weight: 1000;
-    margin: 0 0 0.5rem 0;
 
     @media (width > 800px) {
         font-size: 4rem;
-        margin-bottom: 0.75rem;
     }
 
     @media (width > 1000px) {
-        font-size: 5rem;
+		font-size: 5rem;
     }
 }
 
@@ -118,18 +157,15 @@ hgroup p {
 }
 
 main {
-    padding-inline: var(--gutter);
-    padding-block: var(--vertical);
+    /* padding-inline: var(--gutter); */
     width: 100%;
 
     @media (width > 800px) {
-        padding-inline: 1.5rem;
-        padding-block: 2rem;
+        /* padding-inline: 1.5rem; */
     }
 
     @media (width > 1000px) {
-        padding-inline: 2rem;
-        padding-block: 3rem;
+        /* padding-inline: 2rem; */
     }
 }
 
@@ -146,15 +182,40 @@ main > p {
     }
 }
 
+.button {
+    background-color: var(--global-border-color);
+    color: var(--color);
+    border-radius: 0.75rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    margin: auto;
+    margin-block-start: 2rem;
+    width: fit-content;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+}
+
+.button:hover {
+    background-color: var(--global-border-color-dark);
+	color: var(--color);
+}
+
 footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-block: var(--vertical);
     padding-inline: var(--gutter);
     border-top: 1px solid var(--global-border-color);
     background-color: var(--background-color);
 }
 
-footer p {
-    font-size: 0.85rem;
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+	font-size: 0.85rem;
 
     @media (width > 800px) {
         font-size: 0.9rem;

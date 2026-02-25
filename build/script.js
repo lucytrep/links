@@ -1,9 +1,5 @@
 // class example assisted by coding tutor to better understand rules
 
-
-
-
-
 // Similar to before, setting up variables.
 let dialog = document.querySelector('#dialog') // The thing we’re clicking.
 // let modalDialog = document.querySelector('#dialog') // Now one for our `dialog`.

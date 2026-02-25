@@ -3,29 +3,6 @@
 /* what is the resource I used */
 /* what I learned from it */
 
-body hgroup {
-    border-bottom: none;
-}
-
-hgroup ul {
-    display: block;
-    text-align: center;
-    list-style: none;
-    padding-block-start: 1rem;
-    
-    @media (width > 800px) {
-        font-size: 0.75rem;
-    }
-
-    @media (width > 1000px) {
-        font-size: 0.9rem;
-    }
-}
-
-hgroup ul a:hover {
-    opacity: 0.6;
-}
-
 .build-icon {
     width: 18px;
     height: 18px;
@@ -63,25 +40,6 @@ hgroup ul a:hover {
     text-decoration: none;
 }
 
-.button {
-    background-color: var(--global-border-color);
-    color: var(--color);
-    border-radius: 0.75rem;
-    padding: 0.5rem 1rem;
-    text-align: center;
-    margin: auto;
-    margin-block-start: 2rem;
-    width: fit-content;
-    cursor: pointer;
-    text-decoration: none;
-    display: block;
-}
-
-.button:hover {
-    background-color: #c8c7a6;
-	color: var(--color);
-}
-
 h1 {
     text-align: center;
     letter-spacing: -0.3rem;
@@ -103,10 +61,15 @@ h2 {
     }
 }
 
-body main {
+main {
     padding: 0;
     margin: 0;
     overflow: hidden;
+}
+
+.theme {
+	text-align: center;
+	padding-block-start: 1rem;
 }
 
 /* I wanted to create a continuously scrolling carousel that would loop smoothly */
@@ -117,16 +80,14 @@ body main {
     overflow: hidden;
     position: relative;
     padding-block-start: 3rem;
+    padding-inline: 0;
+    margin: 0;
 }
 
 .carousel-track {
     display: flex;
     gap: 0.5rem;
     animation: scroll 40s linear infinite;
-}
-
-.carousel-track:hover {
-    animation-play-state: paused;
 }
 
 @keyframes scroll {
@@ -138,14 +99,13 @@ body main {
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path */
 /* The polygon points trace the house shape, starting at the peak (50% 0%), moving down to the roof edges (100% 20% and 0% 20%), then outlining the door cutout at the bottom before completing the shape (going back and forth on shape). Each percentage pair is an x,y coordinate that connects to form the clipping path */
 .content-block {
-    min-width: 17.5rem;
+	min-width: 17.5rem;
     width: 17.5rem;
     height: 31.25rem;
     flex-shrink: 0;
     background: white;
-    box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.15);
-	/* clip-path: polygon(50% 0%, 100% 20%, 100% 100%, 62% 100%, 62% 80%, 38% 80%, 38% 100%, 0% 100%, 0% 20%); */
-	clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0% 100%, 0% 25%);
+    box-shadow: 0 0.625rem 1.875rem var(--shadow);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0% 100%, 0% 25%);
 
 
     @media (width > 800px) {
@@ -169,16 +129,3 @@ body main {
     height: 100%;
     object-fit: cover;
 }
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
