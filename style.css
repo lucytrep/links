@@ -26,6 +26,11 @@ hgroup ul a:hover {
     opacity: 0.6;
 }
 
+.build-icon {
+    width: 18px;
+    height: 18px;
+}
+
 .dropdown {
     position: relative;
 }

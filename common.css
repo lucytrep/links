@@ -110,6 +110,7 @@ hgroup p {
     margin: 0;
     font-weight: 300;
     font-size: 0.9rem;
+	text-wrap: balance;
 
     @media (width > 800px) {
         font-size: 1rem;

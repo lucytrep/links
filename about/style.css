@@ -22,17 +22,17 @@ hgroup {
     }
 }
 
+.build-icon {
+    width: 18px;
+    height: 18px;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
-}
-
-.build-icon {
-    width: 18px;
-    height: 18px;
 }
 
 .nav-left {
@@ -91,6 +91,10 @@ hgroup {
     text-decoration: none;
 }
 
+.about p {
+    text-wrap: balance;
+}
+
 .contents {
     display: grid;
     columns: 1fr;
@@ -110,10 +114,6 @@ hgroup {
     p {
         padding-block-end: 2rem;
     }
-}
-
-.about-images {
-
 }
 
 #content-grid {
@@ -149,6 +149,14 @@ img {
     aspect-ratio: 1 / 1;
     object-fit: cover;
     clip-path: inset(0);
+}
+
+.content-block:nth-child(-n+1) {
+    display: none;
+}
+
+#content-grid .content-block:nth-child(n+8) {
+    display: none;
 }
 
 main {

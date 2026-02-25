@@ -45,18 +45,34 @@ body {
 }
 
 hgroup {
-	padding-block: var(--vertical);
-	padding-inline: var(--gutter);
-	border-bottom: 1px solid var(--global-border-color);
-	background-color: var(--background-color);
+    padding-block: var(--vertical);
+    padding-inline: var(--gutter);
 
 	@media (min-width: 600px) {
-		padding-inline: 1.5rem;
+        padding-inline: 1.5rem;
 	}
 
 	@media (min-width: 1000px) {
-		padding-inline: 2rem;
+        padding-inline: 2rem;
 	}
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding-block-start: 1rem;
+    padding-inline: var(--gutter);
+    border-bottom: 1px solid var(--global-border-color);
+    background-color: var(--background-color);
+
+    @media (min-width: 600px) {
+        padding-inline: 1.5rem;
+    }
+
+    @media (min-width: 1000px) {
+        padding-inline: 2rem;
+    }
 }
 
 .navbar {
@@ -139,6 +155,14 @@ hgroup {
     text-underline-offset: 3px;
 }
 
+hgroup p {
+    max-width: 75ch;
+    font-weight: 300;
+    font-size: 0.9rem;
+    text-wrap: balance;
+    padding-block-end: var(--vertical);
+}
+
 hgroup {
 
 	h1 {
@@ -157,8 +181,10 @@ hgroup {
 
 	p {
 		margin: 0;
+        max-width: 75ch;
 		font-weight: 300;
 		font-size: 0.9rem;
+        text-wrap: balance;
 
 		@media (min-width: 600px) {
 			font-size: 1rem;
@@ -181,17 +207,16 @@ hgroup {
 
 main {
 	padding-inline: var(--gutter);
-	padding-block: var(--vertical);
+	/* padding-block: var(--vertical); */
 	width: 100%;
 
 	@media (min-width: 600px) {
 		padding-inline: 1.5rem;
-		padding-block: 2rem;
+		/* padding-block-start: rem; */
 	}
 
 	@media (min-width: 1000px) {
 		padding-inline: 2rem;
-		padding-block: 3rem;
 	}
 }
 
@@ -199,20 +224,19 @@ main {
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator */
 /* learned that child-combinator (>) matches only immediate children of parent tag, "<" is invalid, (wish I used it in my other projects lol) */
 main > p {
-	margin-bottom: 2rem;
-	max-width: 75ch;
-	font-size: 0.9rem;
-	padding-inline: 0.rem;
+    margin-bottom: 2rem;
+    max-width: 75ch;
+    font-size: 0.9rem;
 
-	@media (min-width: 600px) {
-		margin-bottom: 2.5rem;
-		font-size: var(--body-copy);
-	}
+    @media (min-width: 600px) {
+        margin-bottom: 2.5rem;
+        font-size: var(--body-copy);
+    }
 
-	@media (min-width: 1000px) {
-		margin-bottom: 3rem;
-		font-size: var(--body-copy);
-	}
+    @media (min-width: 1000px) {
+        margin-bottom: 3rem;
+        font-size: var(--body-copy);
+    }
 }
 
 /* responsive grid system */
@@ -503,4 +527,3 @@ footer p {
     font-size: 0.85rem;
     margin: 0;
 }
-
