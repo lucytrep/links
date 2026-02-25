@@ -9,6 +9,9 @@
     --vertical: 1.5rem;
     --hover: rgb(196, 214, 196);
     --underline-hover: #64966a;
+	--global-border-color-dark: #c9c8a2;
+	--hover: rgb(196, 214, 196);
+	--underline-hover: #64966a;
 }
 
 * {
