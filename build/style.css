@@ -62,6 +62,7 @@ header {
     z-index: 100;
     padding-block-start: var(--vertical);
     padding-inline: var(--gutter);
+    background-color: var(--background-color);
 
     @media (min-width: 600px) {
         padding-inline: 1.5rem;
@@ -376,10 +377,11 @@ main > p {
     /* font-size: smaller; */
 	line-height: 0.8rem;
 	font-size: 0.6rem;
+    font-style: italic;
 
 	@media (min-width: 600px) {
 		padding-block-start: 1rem;
-		line-height: 1rem;
+		line-height: 1rfem;
 		font-size: 0.7rem;
 	}
 
@@ -449,8 +451,9 @@ main > p {
 .block-type {
     font-size: 0.8rem;
     color: #666;
+    opacity: 50%;
     font-weight: 300;
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-overflow: ellipsis;
     letter-spacing: 0.05rem;
     line-height: 1.2;
@@ -464,7 +467,7 @@ main > p {
     padding: 0.4rem 1rem;
     background-color: var(--global-border-color);
     border: none;
-    border-radius: 2rem;
+    border-radius: 0.75rem;
     font-family: var(--font-family);
     font-size: 0.8rem;
     cursor: pointer;

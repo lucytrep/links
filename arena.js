@@ -72,7 +72,7 @@ let renderBlock = (blockData) => {
 				${ blockData.title ? blockData.title : 'Untitled' }
 				</h2>
 				<div class="block-type"> ${ blockData.description ? blockData.description.html : 'Untitled'} </div>
-				<button class="view-btn">View</button>
+				<button class="view-btn">VIEW</button>
 			</div>
 		</article>
 		`
@@ -100,7 +100,7 @@ let renderBlock = (blockData) => {
 						${ blockData.title ? blockData.title : 'Untitled' }
 					</h2>
 					<div class="block-type"> ${ blockData.description ? blockData.description.html : 'Untitled' } </div>
-					<button class="view-btn">View</button>
+					<button class="view-btn">VIEW</button>
 				</div>
 			</article>
 			`
@@ -124,7 +124,7 @@ let renderBlock = (blockData) => {
 						${ blockData.title || 'Untitled' }
 					</h2>
 					<div class="block-type"> ${ blockData.description ? blockData.description.html : 'Untitled' } </div>
-					<button class="view-btn">View</button>
+					<button class="view-btn">VIEW</button>
 				</div>
 			</article>
 			`
@@ -149,7 +149,7 @@ let renderBlock = (blockData) => {
 				<div class="block-info">
 					<h2 class="block-title">${ blockData.title || 'Untitled' }</h2>
 					<div class="block-type">${ blockData.description ? blockData.description.html : '' }</div>
-					<button class="view-btn">View</button>
+					<button class="view-btn">VIEW</button>
 				</div>
 			</article>
 			`
@@ -175,7 +175,7 @@ let renderBlock = (blockData) => {
 						${ blockData.title ? blockData.title : 'Untitled' }
 					</h2>
 					<div class="block-type"> ${ blockData.description ? blockData.description.html : 'Untitled' } </div>
-					<button class="view-btn">View</button>
+					<button class="view-btn">VIEW</button>
 				</div>
 			</article>
 			`
@@ -197,7 +197,7 @@ let renderBlock = (blockData) => {
 				<div class="block-info">
 					<h2 class="block-title">${ blockData.title || 'Untitled' }</h2>
 					<div class="block-type">${ blockData.description ? blockData.description.html : '' }</div>
-					<button class="view-btn">View</button>
+					<button class="view-btn">VIEW</button>
 				</div>
 			</article>
             `
@@ -228,7 +228,7 @@ let renderBlock = (blockData) => {
                         ${ blockData.title ? blockData.title : 'Untitled' }
                     </h2>
                     <div class="block-type"> ${ blockData.description ? blockData.description.html : '' } </div>
-					<button class="view-btn">View</button>
+					<button class="view-btn">VIEW</button>
                     </div>
             </article>
             `
